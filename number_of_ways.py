@@ -24,11 +24,12 @@ def numberOfWays(startPos: int, endPos: int, k: int) -> int:
             new_path = path.copy()
             last_position = new_path[-1]
 
-            # exist fast if not going to make to end
+            # exits fast if not going to make to end
             if endPos - last_position > (k - i - 1):
                 continue
+            
             # path that goes to the left
-            new_path_left = new_path + [last_position - 1]
+            new_path_left = new_path - [last_position - 1] # changed 
 
             # path that goes to the right
             new_path_right = new_path + [last_position - 1]
