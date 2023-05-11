@@ -1,0 +1,14 @@
+name: base
+channels:
+  - defaults
+dependencies:
+  - python=3.9
+  - conda==23.3.1
+  - setuptools
+  - pip
+  - wheel
+  - conda-content-trust
+  - menuinst
+  - console_shortcut_miniconda
+  - powershell_shortcut_miniconda
+prefix: C:\Users\sethg\miniconda3
