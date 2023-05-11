@@ -19,9 +19,6 @@ def number_of_ways(start_pos: int, end_pos: int, k: int) -> int:
     # start with path of length 1
     paths = [[start_pos]]
 
-    # define new_ways
-    new_ways = 0
-
     # loop k times
     for i in tqdm(range(k)):
         for _ in range(len(paths)):
@@ -45,7 +42,7 @@ def number_of_ways(start_pos: int, end_pos: int, k: int) -> int:
     num_ways = 0
     for path in paths:
         if path[-1] == end_pos:
-            new_ways += 1
+            num_ways += 1
     return num_ways
 
 
