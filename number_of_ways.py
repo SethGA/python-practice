@@ -18,6 +18,9 @@ def numberOfWays(startPos: int, endPos: int, k: int) -> int:
     # start with path of length 1
     paths = [[startPos]]
 
+    # define new_ways
+    new_ways = 0
+
     # loop k times
     for i in tqdm(range(k)):
         for _ in range(len(paths)):
@@ -29,7 +32,7 @@ def numberOfWays(startPos: int, endPos: int, k: int) -> int:
                 continue
             
             # path that goes to the left
-            new_path_left = new_path + [last_position - 1] # changed 
+            new_path_left = new_path + [last_position - 1]
 
             # path that goes to the right
             new_path_right = new_path + [last_position + 1]
@@ -59,6 +62,7 @@ def test_number_of_ways():
     It can be proven that no other way is possible, so we return 3.
     """
     print(numberOfWays(1, 2, 3))
+
 
 if __name__ == "__main__":
     test_number_of_ways()
