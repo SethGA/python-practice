@@ -1,7 +1,7 @@
 from tqdm import tqdm
 
 
-def numberOfWays(start_pos: int, end_pos: int, k: int) -> int:
+def number_of_ways(start_pos: int, end_pos: int, k: int) -> int:
     """
     Solving Leetcode Problem.
     https://leetcode.com/problems/number-of-ways-to-reach-a-position-after-exactly-k-steps/
@@ -61,7 +61,7 @@ def test_number_of_ways():
     - 1 -> 0 -> 1 -> 2.
     It can be proven that no other way is possible, so we return 3.
     """
-    print(numberOfWays(1, 2, 3))
+    print(number_of_ways(1, 2, 3))
 
 
 if __name__ == "__main__":
