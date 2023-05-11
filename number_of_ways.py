@@ -1,7 +1,7 @@
 from tqdm import tqdm
 
 
-def numberOfWays(start_pos: int, endPos: int, k: int) -> int:
+def numberOfWays(start_pos: int, end_pos: int, k: int) -> int:
     """
     Solving Leetcode Problem.
     https://leetcode.com/problems/number-of-ways-to-reach-a-position-after-exactly-k-steps/
@@ -28,7 +28,7 @@ def numberOfWays(start_pos: int, endPos: int, k: int) -> int:
             last_position = new_path[-1]
 
             # exits fast if not going to make to end
-            if endPos - last_position > (k - i):
+            if end_pos - last_position > (k - i):
                 continue
 
             # path that goes to the left
@@ -43,7 +43,7 @@ def numberOfWays(start_pos: int, endPos: int, k: int) -> int:
 
     num_ways = 0
     for path in paths:
-        if path[-1] == endPos:
+        if path[-1] == end_pos:
             new_ways += 1
     return num_ways
 
